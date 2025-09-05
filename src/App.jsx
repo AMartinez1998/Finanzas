@@ -1,7 +1,28 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import Login from "./Login";
+import FinanceApp from "./FinanceApp";
 
-function App() {
-  return(<h1>hola</h1>)
+export default function App() {
+  const [loggedIn, setLoggedIn] = useState(
+    localStorage.getItem("isAuthenticated") === "true"
+  );
+
+  const handleLogin = () => {
+    setLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    localStorage.setItem("isAuthenticated", "false");
+    setLoggedIn(false);
+  };
+
+  return (
+    <>
+      {loggedIn ? (
+        <FinanceApp onLogout={handleLogout} />
+      ) : (
+        <Login onLogin={handleLogin} />
+      )}
+    </>
+  );
 }
-export default App

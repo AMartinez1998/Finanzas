@@ -1,0 +1,217 @@
+/* --- Fondo general con gradiente --- */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+/* --- Caja (tarjeta) --- */
+.auth-box {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+  width: 420px;
+  max-width: 95%;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* --- Animación entrada --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Títulos --- */
+.auth-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* --- Inputs --- */
+.auth-input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.auth-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 6px rgba(102, 126, 234, 0.6);
+}
+
+/* --- Grupos de inputs con label --- */
+.input-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+/* --- Botones --- */
+.auth-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out, background 0.3s;
+}
+
+.auth-button:hover {
+  transform: scale(1.03);
+}
+
+/* Botón de login */
+.auth-button.login {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #fff;
+}
+
+.auth-button.login:hover {
+  background: linear-gradient(135deg, #3a8ee6, #00c9d6);
+}
+
+/* Botón de registro */
+.auth-button.register {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  color: #fff;
+}
+
+.auth-button.register:hover {
+  background: linear-gradient(135deg, #36c769, #2ed9c0);
+}
+
+/* Botón de logout */
+.auth-button.logout {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: #fff;
+}
+
+.auth-button.logout:hover {
+  background: linear-gradient(135deg, #e63a5f, #e04324);
+}
+
+/* --- Enlaces de alternar login/registro --- */
+.auth-toggle {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.auth-toggle span {
+  color: #667eea;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.auth-toggle span:hover {
+  color: #4a5cd6;
+}
+
+/* --- Lista de gastos --- */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  text-align: left;
+}
+
+ul li {
+  background: #f9f9f9;
+  margin: 6px 0;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* --- Resumen --- */
+p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #333;
+}
+
+
+.fixed-reset {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: auto;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.fixed-reset:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #e6855a, #e64b4e);
+}
+
+
+
+
+
+
+
+.finance-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap; /* para que en pantallas pequeñas se apilen */
+  margin-top: 20px;
+}
+
+.left-panel, .right-panel {
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.left-panel {
+  flex: 1 1 300px; /* mínimo 300px, crecer si hay espacio */
+  max-width: 400px;
+}
+
+.right-panel {
+  flex: 1 1 300px;
+  max-width: 600px;
+}
+
+
+.chart-container {
+  width: 100%;
+  height: 300px; /* altura fija para que Recharts pueda renderizar */
+  margin-bottom: 20px;
+}
