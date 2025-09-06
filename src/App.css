@@ -45,6 +45,9 @@
   font-size: 1rem;
   outline: none;
   transition: border 0.3s, box-shadow 0.3s;
+  text-align: center; /* Centrar texto */
+  display: block;
+  box-sizing: border-box;
 }
 
 .auth-input:focus {
@@ -54,8 +57,11 @@
 
 /* --- Grupos de inputs con label --- */
 .input-group {
-  text-align: left;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* label arriba, input debajo */
+  align-items: center;    /* centrar el input */
+  width: 100%;
 }
 
 .input-group label {
@@ -156,7 +162,7 @@ p {
   color: #333;
 }
 
-
+/* Botón reset fijo */
 .fixed-reset {
   position: fixed;
   top: 20px;
@@ -170,7 +176,7 @@ p {
   background: linear-gradient(135deg, #ff9966, #ff5e62);
   color: white;
   cursor: pointer;
-  transition: transform 0.2s, background 0.3s;
+  transition: transform 0.2s,  0.3s;
 }
 
 .fixed-reset:hover {
@@ -178,40 +184,42 @@ p {
   background: linear-gradient(135deg, #e6855a, #e64b4e);
 }
 
-
-
-
-
-
-
+/* --- Contenedor principal de finanzas --- */
 .finance-container {
   display: flex;
   gap: 30px;
   justify-content: center;
-  flex-wrap: wrap; /* para que en pantallas pequeñas se apilen */
+  align-items: stretch; /* Misma altura para ambas tarjetas */
+  flex-wrap: nowrap;
   margin-top: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* --- Paneles izquierdo/derecho --- */
 .left-panel, .right-panel {
+  flex: 1; /* crecen igual */
+  max-width: 500px;
   background: linear-gradient(135deg, #74ebd5, #ACB6E5);
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  text-align: center;
 }
 
-.left-panel {
-  flex: 1 1 300px; /* mínimo 300px, crecer si hay espacio */
-  max-width: 400px;
-}
-
-.right-panel {
-  flex: 1 1 300px;
-  max-width: 600px;
-}
-
-
+/* --- Chart container --- */
 .chart-container {
   width: 100%;
-  height: 300px; /* altura fija para que Recharts pueda renderizar */
+  height: 350px; /* suficiente altura para PieChart y barras */
   margin-bottom: 20px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .finance-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
