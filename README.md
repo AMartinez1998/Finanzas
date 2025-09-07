@@ -1,12 +1,4 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Are you struggling to keep track of your monthly expenses and savings? This app is your solution. It lets you track your spending and determine your savings capacity. It was developed using React, JS, CSS, and HTML
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Tienes problemas para saber tus gastos mensuales y tus ahorros? Esta aplicación es tu solución, en ella podrás tener un contro de tus gastos y podrás saber cual es tu capacidad de ahorro. Para desarrollarla se ha usado React, JS, CSS y HTML.
