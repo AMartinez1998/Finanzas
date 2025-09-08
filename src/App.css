@@ -223,3 +223,49 @@ p {
     justify-content: center;
   }
 }
+
+
+
+/* --- Responsive para menos de 720px --- */
+/* --- Responsive para menos de 720px --- */
+@media (max-width: 720px) {
+  .app-container {
+    padding: 10px;
+  }
+
+  .auth-box {
+    width: 95%;          /* un poco más pequeña */
+    max-width: 380px;    /* límite máximo */
+    padding: 20px;
+    border-radius: 12px;
+    margin: 0 auto;      /* centrada */
+  }
+
+  .finance-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    max-width: 95%;      /* no pegarse a los bordes */
+    margin: 0 auto;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 95%;          /* un poco más estrechas */
+    max-width: 380px;    /* tamaño tope */
+    margin: 0 auto;      /* centradas */
+  }
+
+  .chart-container {
+    height: 240px;       /* más compacto en móvil */
+  }
+
+  .fixed-reset {
+    top: 8px;
+    right: 8px;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+}
+
