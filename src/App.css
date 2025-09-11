@@ -81,7 +81,7 @@
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: transform 0.1s ease-in-out, background 0.3s;
+  transition: transform 0.1s ease-in-out, 0.3s;
 }
 
 .auth-button:hover {
@@ -189,7 +189,7 @@ p {
   display: flex;
   gap: 30px;
   justify-content: center;
-  align-items: stretch; /* Misma altura para ambas tarjetas */
+  align-items: stretch; 
   flex-wrap: nowrap;
   margin-top: 20px;
   width: 100%;
@@ -212,7 +212,7 @@ p {
 /* --- Chart container --- */
 .chart-container {
   width: 100%;
-  height: 350px; /* suficiente altura para PieChart y barras */
+  height: 350px; 
   margin-bottom: 20px;
 }
 
@@ -225,20 +225,17 @@ p {
 }
 
 
-
-/* --- Responsive para menos de 720px --- */
-/* --- Responsive para menos de 720px --- */
 @media (max-width: 720px) {
   .app-container {
     padding: 10px;
   }
 
   .auth-box {
-    width: 95%;          /* un poco más pequeña */
-    max-width: 380px;    /* límite máximo */
+    width: 95%;          
+    max-width: 380px;    
     padding: 20px;
     border-radius: 12px;
-    margin: 0 auto;      /* centrada */
+    margin: 0 auto;      
   }
 
   .finance-container {
@@ -246,19 +243,19 @@ p {
     gap: 20px;
     align-items: center;
     width: 100%;
-    max-width: 95%;      /* no pegarse a los bordes */
+    max-width: 95%;      
     margin: 0 auto;
   }
 
   .left-panel,
   .right-panel {
-    width: 95%;          /* un poco más estrechas */
-    max-width: 380px;    /* tamaño tope */
-    margin: 0 auto;      /* centradas */
+    width: 95%;         
+    max-width: 380px;    
+    margin: 0 auto;     
   }
 
   .chart-container {
-    height: 240px;       /* más compacto en móvil */
+    height: 240px;       
   }
 
   .fixed-reset {
