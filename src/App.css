@@ -45,7 +45,7 @@
   font-size: 1rem;
   outline: none;
   transition: border 0.3s, box-shadow 0.3s;
-  text-align: center; /* Centrar texto */
+  text-align: center; 
   display: block;
   box-sizing: border-box;
 }
@@ -59,8 +59,8 @@
 .input-group {
   margin-bottom: 20px;
   display: flex;
-  flex-direction: column; /* label arriba, input debajo */
-  align-items: center;    /* centrar el input */
+  flex-direction: column; 
+  align-items: center;    
   width: 100%;
 }
 
@@ -200,7 +200,7 @@ p {
 
 /* --- Paneles izquierdo/derecho --- */
 .left-panel, .right-panel {
-  flex: 1; /* crecen igual */
+  flex: 1; 
   max-width: 500px;
   background: linear-gradient(135deg, #74ebd5, #ACB6E5);
   padding: 20px;
